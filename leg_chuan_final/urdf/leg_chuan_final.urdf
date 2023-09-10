@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="leg_chuan_final">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0014321 0.00041851 0.040306"
+        rpy="0 0 0" />
+      <mass
+        value="2.4018" />
+      <inertia
+        ixx="0.009591"
+        ixy="1.9337E-07"
+        ixz="-1.2072E-07"
+        iyy="0.0070769"
+        iyz="-2.7325E-07"
+        izz="0.015485" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leg_chuan_final/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leg_chuan_final/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="left_link1">
+    <inertial>
+      <origin
+        xyz="0.21548 -0.0030993 0.0013257"
+        rpy="0 0 0" />
+      <mass
+        value="0.43137" />
+      <inertia
+        ixx="0.00020436"
+        ixy="-9.8E-06"
+        ixz="1.5473E-07"
+        iyy="0.0027266"
+        iyz="5.4625E-08"
+        izz="0.0026126" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leg_chuan_final/meshes/left_link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leg_chuan_final/meshes/left_link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_joint1"
+    type="revolute">
+    <origin
+      xyz="-0.0436 -0.17124 -0.06"
+      rpy="1.5708 1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_link1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="1.571"
+      effort="100"
+      velocity="5" />
+    <dynamics
+      damping="0.1"
+      friction="0" />
+  </joint>
+  <link
+    name="left_link2">
+    <inertial>
+      <origin
+        xyz="0.17796189333379 0.00157862107610368 -0.0479042300307976"
+        rpy="0 0 0" />
+      <mass
+        value="0.455413997264765" />
+      <inertia
+        ixx="0.000232825591707952"
+        ixy="4.91487669826109E-06"
+        ixz="4.24541899488186E-18"
+        iyy="0.00274374190170977"
+        iyz="1.41521080153611E-17"
+        izz="0.0026249658638958" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leg_chuan_final/meshes/left_link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leg_chuan_final/meshes/left_link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_joint2"
+    type="revolute">
+    <origin
+      xyz="0.438 -0.0031004 0.047592"
+      rpy="0 0 0" />
+    <parent
+      link="left_link1" />
+    <child
+      link="left_link2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="1.571"
+      effort="150"
+      velocity="5" />
+    <dynamics
+      damping="0.1"
+      friction="0" />
+  </joint>
+  <link
+    name="left_link3">
+    <inertial>
+      <origin
+        xyz="0.036675 -0.049331 -0.045802"
+        rpy="0 0 0" />
+      <mass
+        value="0.29119" />
+      <inertia
+        ixx="0.00068435"
+        ixy="-6.0358E-08"
+        ixz="-1.3663E-07"
+        iyy="0.00011606"
+        iyz="9.6683E-08"
+        izz="0.00061049" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leg_chuan_final/meshes/left_link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leg_chuan_final/meshes/left_link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_joint3"
+    type="revolute">
+    <origin
+      xyz="0.44 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="left_link2" />
+    <child
+      link="left_link3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="1.571"
+      effort="200"
+      velocity="5" />
+    <dynamics
+      damping="0.1"
+      friction="0" />
+  </joint>
+  <link
+    name="right_link1">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leg_chuan_final/meshes/right_link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leg_chuan_final/meshes/right_link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_joint1"
+    type="revolute">
+    <origin
+      xyz="-0.0436 0.16876 -0.06"
+      rpy="1.5708 1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_link1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="1.571"
+      effort="100"
+      velocity="5" />
+    <dynamics
+      damping="0.1"
+      friction="0" />
+  </joint>
+  <link
+    name="right_link2">
+    <inertial>
+      <origin
+        xyz="0.17796 0.0015786 -0.047904"
+        rpy="0 0 0" />
+      <mass
+        value="0.45541" />
+      <inertia
+        ixx="0.00023283"
+        ixy="4.9149E-06"
+        ixz="4.1449E-18"
+        iyy="0.0027437"
+        iyz="1.4101E-17"
+        izz="0.002625" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leg_chuan_final/meshes/right_link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leg_chuan_final/meshes/right_link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_joint2"
+    type="revolute">
+    <origin
+      xyz="0.438 -0.0031004 0.047592"
+      rpy="0 0 0" />
+    <parent
+      link="right_link1" />
+    <child
+      link="right_link2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="1.571"
+      effort="150"
+      velocity="5" />
+    <dynamics
+      damping="0.1"
+      friction="0" />
+  </joint>
+  <link
+    name="right_link3">
+    <inertial>
+      <origin
+        xyz="0.036675 -0.049331 -0.045802"
+        rpy="0 0 0" />
+      <mass
+        value="0.29119" />
+      <inertia
+        ixx="0.00068435"
+        ixy="-6.0358E-08"
+        ixz="-1.3663E-07"
+        iyy="0.00011606"
+        iyz="9.6683E-08"
+        izz="0.00061049" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leg_chuan_final/meshes/right_link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leg_chuan_final/meshes/right_link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_joint3"
+    type="revolute">
+    <origin
+      xyz="0.44 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="right_link2" />
+    <child
+      link="right_link3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="1.571"
+      effort="200"
+      velocity="5" />
+    <dynamics
+      damping="0.1"
+      friction="0" />
+  </joint>
+</robot>
